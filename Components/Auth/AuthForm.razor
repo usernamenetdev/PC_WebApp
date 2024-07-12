@@ -1,0 +1,20 @@
+﻿@using Models.Auth
+@using Components.UIKit
+
+<EditForm Model="Login" OnValidSubmit="Submit">
+
+    <TextInput @bind-Value="Login!.Email" />
+    <TextInput @bind-Value="Login!.Password" />
+
+</EditForm>
+
+@code {
+
+    [SupplyParameterFromForm]
+    public Login? Login { get; set; }
+
+    private void Submit()
+    {
+        
+    }
+}
